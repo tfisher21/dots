@@ -9,7 +9,7 @@ return {
   lazy = false,
   keys = {
     {
-      "<leader>e",
+      "<leader>n",
       function()
         require("neo-tree.command").execute({
           close_if_last_window = true,
