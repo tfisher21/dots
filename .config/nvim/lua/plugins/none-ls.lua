@@ -1,16 +1,18 @@
 return {
   "nvimtools/none-ls.nvim",
   config = function()
-    local null_ls = require("null-ls")
+    local none_ls = require("null-ls")
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-    null_ls.setup({
+    none_ls.setup({
       sources = {
-        null_ls.builtins.formatting.stylua,
-        -- null_ls.builtins.diagnostics.rubocop, -- Doesn't work in current Molecule environment due to version of rubocop used
-        null_ls.builtins.formatting.rubocop,
-        null_ls.builtins.diagnostics.eslint_d,
-        null_ls.builtins.formatting.prettier,
+        none_ls.builtins.formatting.stylua,
+        -- none_ls.builtins.diagnostics.rubocop, -- Doesn't work in current Molecule environment due to version of rubocop used
+        none_ls.builtins.formatting.rubocop,
+        none_ls.builtins.diagnostics.eslint_d,
+        none_ls.builtins.formatting.prettier.with({
+          filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "css", "scss", "json", "yaml", "markdown" },
+        }),
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
