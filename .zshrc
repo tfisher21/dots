@@ -142,3 +142,6 @@ alias k=kubectl
 export PATH=$PATH:/Users/tylerfisher/Projects/kubernetes-molecule/bin
 export KUBEDIR=/Users/tylerfisher/Projects/kubernetes-molecule
 export KOPS_STATE_STORE=s3://molecule-kops-config
+
+# Zoxide Initialization
+eval "$(zoxide init --cmd cd zsh)"
