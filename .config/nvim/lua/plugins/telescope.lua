@@ -18,7 +18,6 @@ return {
 						mappings = { -- extend mappings
 							i = {
 								["<C-k>"] = lga_actions.quote_prompt(),
-								["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
 							},
 						},
 					},
@@ -47,6 +46,11 @@ return {
 				"<leader>fr",
 				"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
 				desc = "Live Grep Args",
+			},
+			{
+				"<leader>gc",
+				"<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<cr>",
+				desc = "Live Grep Word Under Cursor",
 			},
 		},
 	},
