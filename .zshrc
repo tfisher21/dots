@@ -139,9 +139,14 @@ export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
 source ~/.moleculerc
 
 alias k=kubectl
-export PATH=$PATH:/Users/tylerfisher/Projects/kubernetes-molecule/bin
-export KUBEDIR=/Users/tylerfisher/Projects/kubernetes-molecule
+export PATH=$PATH:/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule/bin
+export KUBEDIR=/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule
 export KOPS_STATE_STORE=s3://molecule-kops-config
 
 # Zoxide Initialization
 eval "$(zoxide init --cmd cd zsh)"
+export PATH=$PATH:/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule/bin
+export KUBEDIR=/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule
+
+# Elixir PATH
+export PATH="$PATH:/opt/homebrew/bin/elixir"

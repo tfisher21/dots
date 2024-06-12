@@ -6,27 +6,23 @@ return {
 
 		none_ls.setup({
 			sources = {
+				-- Lua Support
 				none_ls.builtins.formatting.stylua,
-				-- none_ls.builtins.diagnostics.rubocop, -- Doesn't work in current Molecule environment due to version of rubocop used
+
+				-- Ruby Support
+				none_ls.builtins.diagnostics.rubocop, -- Doesn't work in current Molecule environment due to version of rubocop used
 				none_ls.builtins.formatting.rubocop,
-				none_ls.builtins.diagnostics.eslint_d,
-				none_ls.builtins.formatting.prettier.with({
-					filetypes = {
-						"javascript",
-						"typescript",
-						"javascriptreact",
-						"typescriptreact",
-						"css",
-						"scss",
-						"json",
-						"yaml",
-						"markdown",
-					},
-				}),
+
+				-- Golang Support
 				none_ls.builtins.diagnostics.golangci_lint,
-				none_ls.builtins.formatting.goimports_reviser,
 				none_ls.builtins.formatting.gofumpt,
+				none_ls.builtins.formatting.goimports,
+				none_ls.builtins.formatting.goimports_reviser,
 				none_ls.builtins.formatting.golines,
+
+				-- Javascript & Typescript Support
+				-- none_ls.builtins.diagnostics.eslint_d,
+				none_ls.builtins.formatting.prettier,
 			},
 			on_attach = function(client, bufnr)
 				if client.supports_method("textDocument/formatting") then
