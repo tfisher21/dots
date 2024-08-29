@@ -10,7 +10,7 @@ return {
 				none_ls.builtins.formatting.stylua,
 
 				-- Ruby Support
-				none_ls.builtins.diagnostics.rubocop, -- Doesn't work in current Molecule environment due to version of rubocop used
+				none_ls.builtins.diagnostics.rubocop,
 				none_ls.builtins.formatting.rubocop,
 
 				-- Golang Support
