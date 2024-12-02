@@ -150,3 +150,11 @@ export KUBEDIR=/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule
 
 # Elixir PATH
 export PATH="$PATH:/opt/homebrew/bin/elixir"
+
+# fzf
+# Shell Integration
+source <(fzf --zsh)
+
+# zsh-autosuggestions
+# Requred to activate the autosuggestions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh

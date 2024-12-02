@@ -21,6 +21,7 @@ return {
 				none_ls.builtins.formatting.golines,
 
 				-- Javascript & Typescript Support
+				none_ls.builtins.diagnostics.eslint,
 				-- none_ls.builtins.diagnostics.eslint_d,
 				none_ls.builtins.formatting.prettier,
 			},

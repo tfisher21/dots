@@ -4,13 +4,15 @@ return {
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		local lspconfig = require("lspconfig")
+		lspconfig.eslint.setup({ capabilities = capabilities })
 		lspconfig.gopls.setup({
 			capabilities = capabilities,
 			settings = { gopls = { gofumpt = true } },
 		})
 		lspconfig.lua_ls.setup({ capabilities = capabilities })
 		lspconfig.pyright.setup({ capabilities = capabilities })
-		lspconfig.tsserver.setup({ capabilities = capabilities })
+		lspconfig.ruby_lsp.setup({ capabilities = capabilities })
+		lspconfig.ts_ls.setup({ capabilities = capabilities })
 
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
