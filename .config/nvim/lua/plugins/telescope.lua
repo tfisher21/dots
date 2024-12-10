@@ -24,33 +24,37 @@ return {
 				},
 			})
 
-			require("telescope").load_extension("live_grep_args")
+			telescope.load_extension("live_grep_args")
 		end,
 		keys = {
 			{
+				"<leader>fb",
+				function()
+					require("telescope.builtin").buffers(require("telescope.themes").get_ivy({}))
+				end,
+				desc = "Buffers",
+			},
+			{
 				"<leader>ff",
-				"<cmd>lua require('telescope.builtin').find_files()<cr>",
+				function()
+					require("telescope.builtin").find_files({})
+				end,
 				desc = "Find Files",
 			},
 			{
 				"<leader>fg",
-				"<cmd>lua require('telescope.builtin').live_grep()<cr>",
-				desc = "Live Grep",
-			},
-			{
-				"<leader>fb",
-				"<cmd>lua require('telescope.builtin').buffers()<cr>",
-				desc = "Buffers",
-			},
-			{
-				"<leader>fr",
-				"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+				function()
+					require("telescope").extensions.live_grep_args.live_grep_args(
+						require("telescope.themes").get_ivy({})
+					)
+				end,
 				desc = "Live Grep Args",
 			},
 			{
-				"<leader>gc",
-				"<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<cr>",
-				desc = "Live Grep Word Under Cursor",
+				"<leader>fh",
+				function()
+					require("telescope.builtin").help_tags()
+				end,
 			},
 		},
 	},
@@ -60,7 +64,7 @@ return {
 			require("telescope").setup({
 				extensions = {
 					["ui-select"] = {
-						require("telescope.themes").get_dropdown({}),
+						require("telescope.themes").get_ivy({}),
 					},
 				},
 			})
