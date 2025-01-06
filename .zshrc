@@ -78,6 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  aliases
   asdf
   git
   zsh-autosuggestions
@@ -130,6 +131,9 @@ alias notes='nvim +"Telekasten panel"'
 alias projects='nvim +"Telescope project"'
 alias zshconfig="nvim ~/.zshrc"
 alias tmuxconfig="nvim ~/.tmux.conf"
+
+# Experimenting with a Ground Up Neovim Rebuild
+alias dnvim='NVIM_APPNAME=demo_nvim nvim'
 
 # PATH
 export PATH="$HOME/bin:$PATH"
