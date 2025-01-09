@@ -127,13 +127,6 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias dots='/usr/bin/git --git-dir=/Users/tylerfisher/.dots/.git --work-tree=/Users/tylerfisher'
-alias notes='nvim +"Telekasten panel"'
-alias projects='nvim +"Telescope project"'
-alias zshconfig="nvim ~/.zshrc"
-alias tmuxconfig="nvim ~/.tmux.conf"
-
-# Experimenting with a Ground Up Neovim Rebuild
-alias dnvim='NVIM_APPNAME=demo_nvim nvim'
 
 # PATH
 export PATH="$HOME/bin:$PATH"
