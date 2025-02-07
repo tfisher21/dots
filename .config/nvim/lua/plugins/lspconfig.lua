@@ -15,8 +15,20 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
 
-      lspconfig.gopls.setup{}
-      lspconfig.lua_ls.setup {}
+      -- TODO: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#imports-and-formatting
+      lspconfig.gopls.setup({
+        settings = {
+          golps = {
+            analyses = {
+              unusedparams = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+          }
+        }
+      })
+      -- lspconfig.json.setup{}
+      lspconfig.jsonnet_ls.setup{}
       lspconfig.ruby_lsp.setup({
         cmd = { "/Users/tylerfisher/.asdf/shims/ruby-lsp" },
         -- cmd = { "/Users/tylerfisher/.asdf/shims/ruby-lsp", "--branch", "main" } -- This line allows us to set a version for ruby-lsp
@@ -24,6 +36,7 @@ return {
       lspconfig.rubocop.setup({
         autostart = false,
       })
+      lspconfig.ts_ls.setup({})
 
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),

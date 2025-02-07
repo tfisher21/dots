@@ -33,6 +33,7 @@ return {
         require("config.telescope.multigrep").setup()
       end)
       vim.keymap.set("n", "<space>fh", builtin.help_tags)
+      vim.keymap.set("n", "<leader><tab>", builtin.commands)
     end
   },
   {

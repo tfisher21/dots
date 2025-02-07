@@ -90,6 +90,14 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# A straightfoward function to clean-up git branches
+function git_branch_cleanup {
+  git branch | grep -v "main" | xargs git branch -D
+}
+
+alias gbc=git_branch_cleanup
+
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
