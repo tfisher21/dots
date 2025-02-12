@@ -156,6 +156,11 @@ export KUBEDIR=/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule
 # Elixir PATH
 export PATH="$PATH:/opt/homebrew/bin/elixir"
 
+# ASDF PATH
+# export ASDF_DATA_DIR="/Users/tylerfisher/.asdf"
+# export PATH="$ASDF_DATA_DIR/shims:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # fzf
 # Shell Integration
 source <(fzf --zsh)
