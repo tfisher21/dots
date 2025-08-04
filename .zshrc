@@ -135,18 +135,22 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias dots='/usr/bin/git --git-dir=/Users/tylerfisher/.dots/.git --work-tree=/Users/tylerfisher'
+alias claude='ASDF_NODEJS_VERSION=23.10.0 claude'
+
 
 # PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
 
-# Molecule environment variables
+# Molecule Specific Environment Variables and Alias
 source ~/.moleculerc
 
 alias k=kubectl
 export PATH=$PATH:/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule/bin
 export KUBEDIR=/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule
 export KOPS_STATE_STORE=s3://molecule-kops-config
+
+alias kubetags=kubectl get pods -n vapor-alpha -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.spec.containers[*].image}{"\n"}{end}' | awk '{print $1 "\t" $2}' | sed 's/\(.*\)\t.*:/\1\t/'
 
 # Zoxide Initialization
 eval "$(zoxide init --cmd cd zsh)"
@@ -168,3 +172,11 @@ source <(fzf --zsh)
 # zsh-autosuggestions
 # Requred to activate the autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+
+# bun completions
+[ -s "/Users/tylerfisher/.bun/_bun" ] && source "/Users/tylerfisher/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

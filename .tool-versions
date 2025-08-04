@@ -1,4 +1,4 @@
-ruby 3.2.2
-nodejs 21.4.0
+ruby 3.4.2
+nodejs 23.10.0
 golang 1.22.2
 python 3.10.2
