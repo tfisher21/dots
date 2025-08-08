@@ -135,7 +135,6 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias dots='/usr/bin/git --git-dir=/Users/tylerfisher/.dots/.git --work-tree=/Users/tylerfisher'
-alias claude='ASDF_NODEJS_VERSION=23.10.0 claude'
 
 
 # PATH
@@ -180,3 +179,5 @@ export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"
