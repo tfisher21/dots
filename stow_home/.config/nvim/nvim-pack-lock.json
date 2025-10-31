@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "catppuccin": {
+      "rev": "8c4125e",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "catpuccin": {
+      "rev": "8c4125e",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "e25994a",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    }
+  }
+}
