@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "blink.cmp": {
+      "rev": "2408f14",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
     "catppuccin": {
       "rev": "8c4125e",
       "src": "https://github.com/catppuccin/nvim"
@@ -8,9 +12,37 @@
       "rev": "8c4125e",
       "src": "https://github.com/catppuccin/nvim"
     },
+    "gitsigns.nvim": {
+      "rev": "20ad441",
+      "src": "https://www.github.com/lewis6991/gitsigns.nvim"
+    },
+    "mini.nvim": {
+      "rev": "e96ef33",
+      "src": "https://www.github.com/echasnovski/mini.nvim"
+    },
+    "nvim": {
+      "rev": "8c4125e",
+      "src": "https://github.com/catppuccin/nvim"
+    },
     "nvim-lspconfig": {
       "rev": "e25994a",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "oil.nvim": {
+      "rev": "7e1cd77",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd522",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "telescope.nvim": {
+      "rev": "b4da76b",
+      "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "treesitter": {
+      "rev": "42fc28ba",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     }
   }
 }
