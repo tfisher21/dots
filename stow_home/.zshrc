@@ -29,6 +29,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Molecule Specific Run Commands
 source ~/.moleculerc
-
-# ASDF Configuration
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
