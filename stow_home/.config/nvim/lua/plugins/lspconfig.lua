@@ -20,9 +20,23 @@ vim.lsp.config['gopls'] = {
   },
 }
 
+vim.lsp.config['ruby_lsp'] = {
+  cmd = { "/Users/tylerfisher/.asdf/shims/ruby-lsp" },
+  -- cmd = { "/Users/tylerfisher/.asdf/shims/ruby-lsp", "--branch", "main" } -- This line allows us to set a version for ruby-lsp
+  filetypes = { 'ruby', 'eruby' },
+  root_markers = { 'Gemfile' },
+}
+
+vim.lsp.config['rubocop'] = {
+  autostart = false,
+}
+
 vim.lsp.enable({
   'lua_ls', -- os package manager: `brew install lua-language-server`
   'gopls', -- os package manager: `go install golang.org/x/tools/gopls@latest`
+  'rubocop', -- likely installed by bundler
+  'ruby_lsp' -- os package manager: gem install ruby-lsp
+
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
