@@ -1,2 +1,6 @@
 # TMUX Plugins
 .config/tmux/plugins
+
+# Tool-generated config (npm configstore, 1Password CLI)
+stow_home/.config/configstore/
+stow_home/.config/op/

@@ -27,5 +27,17 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
+alias gbc="git branch | awk '/main|^\*/ {next} {print $1}' | xargs git branch -D"
+
 # Molecule Specific Run Commands
 source ~/.moleculerc
+export PATH=$PATH:/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule/bin
+export KUBEDIR=/Users/tylerfisher/Projects/wearemolecule/kubernetes-molecule
+export KOPS_STATE_STORE=s3://molecule-kops-config
+
+# PostgreSQL
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# JAVA_HOME
+. ~/.asdf/plugins/java/set-java-home.zsh
