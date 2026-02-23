@@ -1,3 +1,3 @@
-# theme = Catppuccin Macchiato
-# theme = TokyoNight Night
-theme = Dracula+
+font-family = Source Code Pro
+theme = TokyoNight Night
+window-padding-y = 4
