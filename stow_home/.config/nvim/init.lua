@@ -16,6 +16,7 @@ vim.keymap.set("n", "<leader>ya", '<cmd>let @+ = expand("%:p")<cr>', { desc = "C
 vim.keymap.set("n", "<leader>qo", "<cmd>:cope<cr>", { desc = "Open Quickfix Menu", silent = true })
 vim.keymap.set("n", "<leader>qc", "<cmd>:ccl<cr>", { desc = "Close Quickfix Menu", silent = true })
 
+-- Update plugins via `:lua vim.pack.update()`
 require("plugins.blink")
 require("plugins.catppuccin")
 require("plugins.gitsigns")
