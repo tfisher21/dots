@@ -1,12 +1,7 @@
-vim.pack.add({
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter", name = "treesitter" },
-})
+vim.pack.add({ { src = "https://github.com/nvim-treesitter/nvim-treesitter"} })
+require('nvim-treesitter').install { 'rust', 'go', 'lua', 'ruby', 'vim' }
 
-require("nvim-treesitter.configs").setup({
-  ensure_installed = { "go", "lua", "rust", "vim" },
-  sync_install = true,
-  auto_install = false,
-  highlight = { enable = true },
-  incremental_selection = { enable = true },
-  indent = { enable = true },
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { "go", "lua", "ruby", "rust", "vim" },
+  callback = function() vim.treesitter.start() end,
 })
