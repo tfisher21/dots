@@ -4,3 +4,4 @@
 # Tool-generated config (npm configstore, 1Password CLI)
 stow_home/.config/configstore/
 stow_home/.config/op/
+stow_home/.config/cagent/
