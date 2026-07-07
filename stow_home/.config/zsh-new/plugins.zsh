@@ -33,3 +33,19 @@ _zplugin_load zdharma-continuum fast-syntax-highlighting
 # ========================================
 
 source "$ZDOTDIR/git.zsh" # git aliases, ported from oh-my-zsh's git plugin
+
+# asdf ships its own `completion` subcommand rather than a clonable
+# plugin repo, so this is generated/cached locally instead of via
+# _zplugin_load.
+() {
+  (( $+commands[asdf] )) || return
+  local completions_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/completions"
+  mkdir -p "$completions_dir"
+  fpath+=("$completions_dir")
+  if [[ ! -f "$completions_dir/_asdf" ]]; then
+    typeset -g -A _comps
+    autoload -Uz _asdf
+    _comps[asdf]=_asdf
+  fi
+  asdf completion zsh >| "$completions_dir/_asdf" &|
+}
