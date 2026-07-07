@@ -14,6 +14,21 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 
 # ========================================
+# Editor / Pager / Prompt
+# ========================================
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+if command -v bat >/dev/null 2>&1; then
+  export MANPAGER="bat -l man -p"
+elif command -v batcat >/dev/null 2>&1; then
+  export MANPAGER="batcat -l man -p"
+fi
+
+export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
+
+# ========================================
 # Shell Behavior
 # ========================================
 
