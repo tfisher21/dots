@@ -27,3 +27,9 @@ _zplugin_load zsh-users zsh-autosuggestions
 _zplugin_load zsh-users zsh-history-substring-search
 _zplugin_load jeffreytse zsh-vi-mode
 _zplugin_load zdharma-continuum fast-syntax-highlighting
+
+# ========================================
+# Vendored (non-clonable) plugins
+# ========================================
+
+source "$ZDOTDIR/git.zsh" # git aliases, ported from oh-my-zsh's git plugin
