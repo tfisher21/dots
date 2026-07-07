@@ -9,3 +9,8 @@ stow_home/.config/cagent/
 # zsh runtime files (not tracked)
 stow_home/.config/zsh/.zsh_history
 stow_home/.config/zsh/.zcompdump*
+stow_home/.config/zsh-new/.zsh_history
+stow_home/.config/zsh-new/.zcompdump*
+stow_home/.config/zsh-new/plugins/
+stow_home/.config/zsh-old/.zsh_history
+stow_home/.config/zsh-old/.zcompdump*
