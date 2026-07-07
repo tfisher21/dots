@@ -28,4 +28,4 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias gbc="git branch | awk '/main|^\*/ {next} {print $1}' | xargs git branch -D"
+alias gbc="git branch | awk '/main|^\*/ {next} {print \$1}' | xargs git branch -D"
