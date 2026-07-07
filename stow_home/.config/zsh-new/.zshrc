@@ -42,7 +42,7 @@ setopt NUMERIC_GLOB_SORT # sort file10 after file9
 export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$PATH"
 
 # Initialize zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # ========================================
 # Completion
