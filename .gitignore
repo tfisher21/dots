@@ -5,3 +5,7 @@
 stow_home/.config/configstore/
 stow_home/.config/op/
 stow_home/.config/cagent/
+
+# zsh runtime files (not tracked)
+stow_home/.config/zsh/.zsh_history
+stow_home/.config/zsh/.zcompdump*
