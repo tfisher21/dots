@@ -21,6 +21,11 @@ setopt AUTOCD
 setopt NOBEEP
 setopt NUMERIC_GLOB_SORT # sort file10 after file9
 
+# asdf shims — must be prepended after /etc/zprofile's path_helper runs
+# (in .zshrc, not .zshenv), or path_helper pushes /usr/bin ahead of it,
+# letting macOS system binaries (e.g. /usr/bin/ruby) shadow asdf shims.
+export PATH="$HOME/.asdf/shims:$HOME/.asdf/bin:$PATH"
+
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
