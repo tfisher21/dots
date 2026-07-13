@@ -430,8 +430,24 @@ for old_name new_name (
 done
 unset old_name new_name
 
-# Delete all local branches except main and the current branch
-alias gbc="git branch | awk '/main|^\*/ {next} {print \$1}' | xargs git branch -D"
+# Delete local branches already merged into the default branch (skips current branch and any branch checked out in another worktree)
+gbc() {
+  local current default
+  current=$(git rev-parse --abbrev-ref HEAD)
+  default=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null | sed 's#^origin/##')
+  default=${default:-main}
+
+  local -a in_use
+  in_use=(${(f)"$(git worktree list --porcelain | awk '/^branch /{sub("refs/heads/",""); print $2}' FS=' ')"})
+
+  git branch --merged "$default" \
+    | sed 's/^[* +]*//' \
+    | while read -r branch; do
+        [[ "$branch" == "$current" || "$branch" == "$default" ]] && continue
+        (( ${in_use[(Ie)$branch]} )) && continue
+        git branch -D "$branch"
+      done
+}
 
 # --- Vendored from oh-my-zsh's lib/git.zsh (not plugins/git/git.plugin.zsh) ---
 # The aliases/functions above call `git_current_branch`, which the plugin
