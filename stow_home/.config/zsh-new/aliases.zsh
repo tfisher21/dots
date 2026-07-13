@@ -19,3 +19,9 @@ alias cat='bat' # better cat
 alias grep='rg --color=auto'
 alias diff='diff --color=auto'
 alias df='df -h'
+
+# ========================================
+# Claude
+# ========================================
+
+alias ca='claude agents'
