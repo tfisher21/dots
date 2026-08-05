@@ -5,6 +5,11 @@
 stow_home/.config/configstore/
 stow_home/.config/op/
 stow_home/.config/cagent/
+stow_home/.config/1Password/
+
+# gh writes its OAuth token into hosts.yml whenever the OS keychain is
+# unavailable, so never track it. gh/config.yml is tracked deliberately.
+stow_home/.config/gh/hosts.yml
 
 # zsh runtime files (not tracked)
 stow_home/.config/zsh/.zsh_history
