@@ -2,13 +2,13 @@
 # File Listing Replacement
 # ========================================
 
-alias ls='eza --icons' # better ls
-alias ll='eza -lh --icons --git' # detailed listing
-alias la='eza -lah --icons --git' # detailed listing including hidden files
+# --icons takes an optional WHEN value, so a bare --icons swallows the first
+# argument as its value ("ls somedir" -> invalid value 'somedir'). Always pin it.
+alias ls='eza --icons=auto' # better ls
+alias ll='eza -lh --icons=auto --git' # detailed listing
+alias la='eza -lah --icons=auto --git' # detailed listing including hidden files
 
-alias tree='eza --tree --icons' # tree view
-
-compdef eza=ls # reuse ls completions for eza (avoids defining a separate completion function)
+alias tree='eza --tree --icons=auto' # tree view
 
 alias cat='bat' # better cat
 
