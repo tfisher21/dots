@@ -63,6 +63,9 @@ zstyle ':completion:*' menu select
 # Example: "doc" can complete to "Documents"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # lowercase input matches upper and lower
 
+# Mole shell completion
+if output="$(mole completion zsh 2>/dev/null)"; then eval "$output"; fi
+
 # ========================================
 # Fuzzy Finder
 # ========================================

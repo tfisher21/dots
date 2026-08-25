@@ -1,0 +1,27 @@
+2026-08-21T17:50:53.365775Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=96348
+2026-08-21T17:50:53.365813Z  INFO herdr::client: connecting to server path=/Users/tylerfisher/.config/herdr/herdr-client.sock
+2026-08-21T17:50:53.603979Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-08-25T15:25:09.694521Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=96348
+2026-08-25T15:30:07.576658Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.new_workspace = "n" would intercept typing; use "prefix+n" to require the prefix; disabling binding
+2026-08-25T15:30:07.576820Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.rename_workspace = "shift+n" would intercept typing; use "prefix+shift+n" to require the prefix; disabling binding
+2026-08-25T15:30:07.576826Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.close_workspace = "shift+d" would intercept typing; use "prefix+shift+d" to require the prefix; disabling binding
+2026-08-25T15:30:07.576832Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.new_tab = "t" would intercept typing; use "prefix+t" to require the prefix; disabling binding
+2026-08-25T15:30:07.576836Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.rename_tab = "shift+t" would intercept typing; use "prefix+shift+t" to require the prefix; disabling binding
+2026-08-25T15:30:07.576841Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.close_tab = "shift+w" would intercept typing; use "prefix+shift+w" to require the prefix; disabling binding
+2026-08-25T15:30:07.576881Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=317
+2026-08-25T15:30:07.576887Z  INFO herdr::client: connecting to server path=/Users/tylerfisher/.config/herdr/herdr-client.sock
+2026-08-25T15:30:07.721206Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-08-25T15:35:09.961059Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=317
+2026-08-25T15:35:12.403181Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=2606
+2026-08-25T15:35:12.403208Z  INFO herdr::client: connecting to server path=/Users/tylerfisher/.config/herdr/herdr-client.sock
+2026-08-25T15:35:12.648977Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-08-25T15:38:41.880765Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=2606
+2026-08-25T15:39:32.795776Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.new_workspace = "n" would intercept typing; use "prefix+n" to require the prefix; disabling binding
+2026-08-25T15:39:32.795884Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.rename_workspace = "shift+n" would intercept typing; use "prefix+shift+n" to require the prefix; disabling binding
+2026-08-25T15:39:32.795894Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.close_workspace = "shift+d" would intercept typing; use "prefix+shift+d" to require the prefix; disabling binding
+2026-08-25T15:39:32.795902Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.new_tab = "t" would intercept typing; use "prefix+t" to require the prefix; disabling binding
+2026-08-25T15:39:32.795907Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.rename_tab = "shift+t" would intercept typing; use "prefix+shift+t" to require the prefix; disabling binding
+2026-08-25T15:39:32.795913Z  WARN herdr::config::keybinds: config diagnostic unsafe direct keybinding: keys.close_tab = "shift+w" would intercept typing; use "prefix+shift+w" to require the prefix; disabling binding
+2026-08-25T15:39:32.795962Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=4664
+2026-08-25T15:39:32.795977Z  INFO herdr::client: connecting to server path=/Users/tylerfisher/.config/herdr/herdr-client.sock
+2026-08-25T15:39:32.943502Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame

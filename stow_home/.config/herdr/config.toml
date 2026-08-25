@@ -1,0 +1,60 @@
+onboarding = false
+[keys]
+new_tab   = ["prefix+c", "cmd+t"]
+close_tab = "prefix+shift+x"
+
+new_workspace   = ["prefix+shift+n", "cmd+n"]
+new_worktree    = ["prefix+shift+g", "cmd+shift+n"]
+open_worktree   = ["prefix+shift+o", "cmd+o"]
+close_workspace = ["prefix+shift+d", "cmd+shift+w"]
+
+previous_workspace = "cmd+shift+up"
+next_workspace     = "cmd+shift+down"
+switch_workspace  = "cmd+ctrl+1..9"
+
+previous_agent     = "cmd+ctrl+up"
+next_agent         = "cmd+ctrl+down"
+focus_agent        = "cmd+ctrl+alt+1..9"
+
+previous_tab = ["prefix+p", "cmd+shift+["]
+next_tab     = ["prefix+n", "cmd+shift+]"]
+switch_tab  = ["prefix+1..9", "cmd+1..9"]
+
+split_vertical   = ["prefix+v", "cmd+d"]
+split_horizontal = ["prefix+minus", "cmd+shift+d"]
+
+cycle_pane_previous = ["prefix+shift+tab", "cmd+["]
+cycle_pane_next     = ["prefix+tab", "cmd+]"]
+focus_pane_left     = ["prefix+h", "cmd+alt+left"]
+focus_pane_down     = ["prefix+j", "cmd+alt+down"]
+focus_pane_up       = ["prefix+k", "cmd+alt+up"]
+focus_pane_right    = ["prefix+l", "cmd+alt+right"]
+zoom                = ["prefix+z", "cmd+shift+enter"]
+
+[keys.indexed]
+workspaces = "ctrl+shift"
+tabs = "alt"
+
+[[keys.command]]
+key = "cmd+w"
+type = "popup"
+command = "herdr-confirm-close-tab.sh"
+description = "close tab with confirmation"
+width = 44
+height = 5
+
+[theme]
+name = "catppuccin-mocha"
+auto_switch = false
+
+[ui]
+mouse_capture = true
+status_indicators = "symbols"
+show_agent_labels_on_pane_borders = true
+prompt_new_tab_name = false
+
+[ui.toast]
+delivery = "terminal"
+delay_seconds = 1
+
+# Credit to: https://suraj.io/post/2026/ghostty-as-a-shell-for-herdr/
