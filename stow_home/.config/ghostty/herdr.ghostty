@@ -1,9 +1,3 @@
-font-family = Source Code Pro
-theme = Catppuccin Mocha
-unfocused-split-opacity = 0.85
-unfocused-split-fill = Black
-window-padding-y = 4
-
 ## Herdr Support ##
 
 # Unbind Ghostty Defaults
@@ -100,3 +94,4 @@ keybind = cmd+ctrl+alt+Digit8=text:\x1b[56;15u
 keybind = cmd+ctrl+alt+Digit9=text:\x1b[57;15u
 
 # Credit to: https://suraj.io/post/2026/ghostty-as-a-shell-for-herdr/
+

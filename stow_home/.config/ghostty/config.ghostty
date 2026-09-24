@@ -1,0 +1,8 @@
+font-family = Source Code Pro
+theme = Catppuccin Mocha
+unfocused-split-opacity = 0.85
+unfocused-split-fill = Black
+window-padding-y = 4
+
+## Herdr Support ##
+# config-file = herdr.ghostty
