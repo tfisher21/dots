@@ -123,6 +123,8 @@ gaps.outer.right =      25
     alt-l = 'focus right'
     alt-rightSquareBracket = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
     alt-leftSquareBracket = 'focus dfs-prev --boundaries-action wrap-around-the-workspace'
+    ctrl-right = 'workspace --wrap-around next'
+    ctrl-left = 'workspace --wrap-around prev'
 
     # See: https://nikitabobko.github.ui/AeroSpace/commands#fullscreen
     alt-f = 'fullscreen'
